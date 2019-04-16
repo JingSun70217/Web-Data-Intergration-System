@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="music">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="music" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" type="xs:string"/>
+							<xs:element name="songName" type="xs:string"/>
+							<xs:element name="songYear" type="xs:short"/>
+							<xs:element name="artists">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="artist">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="artistName" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="songGenre" type="xs:string"/>
+							<xs:element name="lyrics" type="xs:string"/>
+							<xs:element name="albumName" type="xs:string"/>
+							<xs:element name="songAward" type="xs:string"/>
+							<xs:element name="bands">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="band">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="bandName" type="xs:string"/>
+													<xs:element name="bandActiveYear" type="xs:short"/>
+													<xs:element name="bandGenre" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2018r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="target_schema" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="980" lty="37" rbx="1455" rby="522"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="music" expanded="1">
+										<entry name="music" inpkey="1" expanded="1">
+											<entry name="id" inpkey="2"/>
+											<entry name="songName" inpkey="3"/>
+											<entry name="artists" expanded="1">
+												<entry name="artist" expanded="1">
+													<entry name="artistName" inpkey="5"/>
+												</entry>
+											</entry>
+											<entry name="lyrics" inpkey="6"/>
+											<entry name="bands" expanded="1">
+												<entry name="band" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="target_schema.xsd" outputinstance="target_schema.xml" instanceroot="{}music"/>
+					</data>
+				</component>
+				<component name="songdata55.csv" library="text" uid="4" kind="16">
+					<properties/>
+					<view ltx="474" lty="68" rbx="677" rby="268"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="13" expanded="1">
+										<entry name="id" outkey="14"/>
+										<entry name="artist" outkey="15"/>
+										<entry name="song" outkey="16"/>
+										<entry name="text" outkey="17"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" inputinstance="..\data\songdata55.csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="songdata55.csv" block="Rows">
+									<field0 name="id" type="string"/>
+									<field1 name="artist" type="string"/>
+									<field2 name="song" type="string"/>
+									<field3 name="link" type="string"/>
+									<field4 name="text" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="2"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
